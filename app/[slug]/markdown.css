@@ -1,0 +1,75 @@
+/* CSS vars for code block customization (used by Wrapper components) */
+.markdown {
+  line-height: 28px;
+  --path: none;
+  --radius-top: 12px;
+  --radius-bottom: 12px;
+  --padding-top: 1rem;
+  --padding-bottom: 1rem;
+}
+
+.markdown iframe {
+  width: calc(100% + 2rem) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown iframe {
+    border-color: #444 !important;
+  }
+}
+
+@media (max-width: 672px) {
+  .markdown pre,
+  .markdown iframe {
+    width: calc(100% + 2.5rem) !important;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .markdown pre {
+    border-radius: 0 !important;
+  }
+  .markdown iframe {
+    border-left: none !important;
+    border-right: none !important;
+  }
+}
+
+/* Code line highlighting - data-attribute from rehype-pretty-code */
+.markdown pre [data-highlighted-line] {
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 12px;
+  border-left: 4px solid #ffa7c4;
+  background-color: #022a4b;
+  display: block;
+  padding-right: 1em;
+}
+
+/* Tip button styles */
+.tip {
+  @apply inline-block px-8 py-4 font-sans font-semibold text-xl rounded-full shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-opacity-50 border-b-[1px] text-white overflow-clip transition-transform;
+  border-color: var(--link);
+}
+
+.tip.tip-sm {
+  @apply inline-block px-6 py-2 text-lg shadow-md;
+}
+
+.tip-bg {
+  background-image: linear-gradient(45deg, var(--purple), var(--pink));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tip-bg {
+    filter: brightness(0.46);
+  }
+}

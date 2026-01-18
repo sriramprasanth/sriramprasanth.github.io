@@ -1,0 +1,11 @@
+diff --git a/node_modules/colorjs.io/types/src/index.d.ts b/node_modules/colorjs.io/types/src/index.d.ts
+index 665838c..017826e 100644
+--- a/node_modules/colorjs.io/types/src/index.d.ts
++++ b/node_modules/colorjs.io/types/src/index.d.ts
+@@ -1,5 +1,5 @@
+ import { uv, xy } from "./chromaticity";
+-import Color from "./color";
++
+ import contrast from "./contrast";
+ import {
+ 	contrastWCAG21,
